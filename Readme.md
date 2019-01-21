@@ -1,9 +1,8 @@
 # Web Document Viewer - How to export documents in an application with token-based authentication
 
-The [Web Document Viewer](https://documentation.devexpress.com/AspNet/114491/ASP-NET-MVC-Extensions/Reporting/Document-Viewer/HTML5-Document-Viewer) uses AJAX requests for most API calls excluding the case when a web browser requests the export or print result. In the latter cases, the Web Document Viewer uses the unique identifier for each export operation by default.
+For all API calls except print and export operations, the [Web Document Viewer](https://documentation.devexpress.com/AspNet/114491/ASP-NET-MVC-Extensions/Reporting/Document-Viewer/HTML5-Document-Viewer) sends AJAX requests to the server. For print and export operations, a _web browser_ requests the result from the server, but these requests have no headers.
 
-The [WebDocumentViewerApiController](https://documentation.devexpress.com/AspNet/DevExpress.Web.Mvc.Controllers.WebDocumentViewerApiController.Invoke.method)'s **Invoke** action processes all requests from the Web Document Viewer. In this example, access to this action is restricted using the [Bearer authentication](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/individual-accounts-in-web-api).
-The **IWebDocumentViewerExportResultUriGenerator** service allows you to override the mechanism of getting export results. 
+On the server side, the [WebDocumentViewerApiController](https://documentation.devexpress.com/AspNet/DevExpress.Web.Mvc.Controllers.WebDocumentViewerApiController.Invoke.method)'s **Invoke** action processes all requests. In this example, access to this action is restricted using the [Bearer authentication](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/individual-accounts-in-web-api). The [IWebDocumentViewerExportResultUriGenerator](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.IWebDocumentViewerExportResultUriGenerator) service allows you to override the mechanism of getting export results.
 
 This example demonstrates how to use Bearer-based authentication in ASP.NET MVC applications and export documents in it.
 
