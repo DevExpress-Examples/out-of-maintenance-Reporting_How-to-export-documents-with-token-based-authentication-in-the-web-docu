@@ -1,6 +1,6 @@
 ﻿function ReportViewerInit(s, e) {
-    DevExpress.Report.Preview.HandlerUri = "/ReportViewer/Invoke";
-    DevExpress.Report.Preview.AsyncExportApproach = true;
+    DevExpress.Reporting.Viewer.Settings.HandlerUri("/ReportViewer/Invoke");
+    DevExpress.Reporting.Viewer.Settings.AsyncExportApproach(true);
 }
 
 function ViewModel() {
