@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Web Document Viewer - How to export documents in an application with token-based authentication
 
-For all API calls except print and export operations, the [Web Document Viewer](https://documentation.devexpress.com/AspNet/114491/ASP-NET-MVC-Extensions/Reporting/Document-Viewer/HTML5-Document-Viewer) sends AJAX requests to the server. For print and export operations, a _web browser_ requests the result from the server, but these requests have no headers. On the server side, the [WebDocumentViewerApiController](https://documentation.devexpress.com/AspNet/DevExpress.Web.Mvc.Controllers.WebDocumentViewerApiController.Invoke.method)'s **Invoke** action processes all requests. 
+For all API calls except print and export operations, the [Web Document Viewer](https://documentation.devexpress.com/AspNet/114491/ASP-NET-MVC-Extensions/Reporting/Document-Viewer/HTML5-Document-Viewer) sends AJAX requests to the server. For print and export operations, a _web browser_ requests the result from the server, but these requests have no headers. On the server side, the [WebDocumentViewerApiController](https://documentation.devexpress.com/AspNet/DevExpress.Web.Mvc.Controllers.WebDocumentViewerApiController)'s **Invoke** action processes all requests. 
 
 When your application uses header-token authentication, this controller action is protected (for instance, with a [Bearer authentication](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/individual-accounts-in-web-api)). A web browser cannot obtain export and print results, because its requests have no headers and cannot be authenticated.
 
