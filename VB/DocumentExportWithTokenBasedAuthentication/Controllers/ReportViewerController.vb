@@ -5,7 +5,7 @@ Imports System.Web.Mvc
 
 Namespace T680906.Controllers
 	Public Class ReportViewerController
-		Inherits WebDocumentViewerApiController
+		Inherits WebDocumentViewerApiControllerBase
 
 		Private documentExportService As IExportResultProvider
 		Public Sub New()
