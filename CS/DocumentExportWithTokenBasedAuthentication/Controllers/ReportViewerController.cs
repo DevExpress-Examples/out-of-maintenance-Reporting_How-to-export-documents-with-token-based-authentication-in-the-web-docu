@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace T680906.Controllers
 {
-    public class ReportViewerController : WebDocumentViewerApiController
+    public class ReportViewerController : WebDocumentViewerApiControllerBase
     {
         IExportResultProvider documentExportService;
         public ReportViewerController() {
